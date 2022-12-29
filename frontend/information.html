@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="lungs.png" type="image/x-icon">
+    <title>โรคมะเร็งปอด</title>
+    <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+<body>
+    <div class="bd-highlight mb-3">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #95EEF8;">
+            <div class="container-fluid">
+                <a class="navbar-brand line">โรคมะเร็งปอด&nbsp;&nbsp;&nbsp;</a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="information.html">Information</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex">
+                    <input class="form-control me-2" id="searchTextBox" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn btn-outline-dark" onclick="loadQueryTable();return false;">Search</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container-fluid">
+        <div class="d-flex bd-highlight mb-3">
+            <div class="me-auto p-2 bd-highlight">
+                <h2>ข้อมูลเกี่ยวกับผู้ป่วยจากโรคมะเร็งปอด</h2>
+            </div>
+            <div class="p-2 bd-highlight">
+                <button type="button" class="btn btn-primary" onclick="showPatientLungCancerCreateBox()">Create</button>
+            </div>
+            <div class="p-2 bd-highlight">
+                <button type="button" class="btn btn-success" onclick="loadTable()">Refresh</button>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover text-center">
+                <thead style="background-color: #95EEF8;">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">PatientID</th>
+                        <th scope="col">อายุ</th>
+                        <th scope="col">เพศ</th>
+                        <th scope="col">มลพิษทางอากาศ</th>
+                        <th scope="col">การดื่มแอลกอฮอล์</th>
+                        <th scope="col">การแพ้ฝุ่น</th>
+                        <th scope="col">อันตรายจากการทำงาน</th>
+                        <th scope="col">การสูบบุหรี่</th>
+                        <th scope="col">การได้รับควันบุหรี่จากผู้อื่น</th>
+                        <th scope="col">แก้ไข & ลบ</th>
+                    </tr>
+                </thead>
+                <tbody id="mytable" class="table-light">
+                </tbody>
+            </table>
+        </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center" id="pagination">
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+            </ul>
+        </nav>
+        <!-- Back to top button -->
+        <button type="button" class="btn btn-dark rounded-circle btn-lg" id="btn-back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <script src="information.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
