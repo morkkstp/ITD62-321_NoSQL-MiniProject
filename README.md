@@ -2,6 +2,8 @@
 
 เป็น MiniProject เกี่ยวการนำ Dataset ใน Kaggle มาใช้งานร่วมกับ NoSQL และ Fullstack
 
+ก่อนอื่นต้องโหลดไฟล์ dataset จาก URL ที่ให้ไป นำไป import ใน MongoDB Compass โดยกำหนดชื่อ Database ว่า lcpDB และชื่อ Collection ว่า lcpData
+
 วิธีการใช้งาน
 1. เปิดไฟล์ server.js ในโฟลเดอร์ backend
 2. เปิด terminal
