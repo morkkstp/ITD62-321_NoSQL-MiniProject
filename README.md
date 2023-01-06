@@ -17,3 +17,5 @@
 6. เพียงเท่านี้ก็สามารถใช้งานได้
 
 URL Source Data: https://www.kaggle.com/datasets/thedevastator/cancer-patients-and-air-pollution-a-new-link
+
+# eiei
